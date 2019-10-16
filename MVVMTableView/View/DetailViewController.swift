@@ -24,8 +24,26 @@ class DetailViewController: UIViewController {
     }
     
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel?.age.bind(listener: { [unowned self] in
+            
+            guard let string = $0 else { return }
+            self.textLabel.text = string
+        })
+        delayn(delay: 5) { [unowned self] in
+            self.viewModel?.age.value = "some new value"
+        }
+    }
 
+    
+    private func delayn(delay: Double, clouser: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + delay) {
+            clouser()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

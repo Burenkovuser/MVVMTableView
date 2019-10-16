@@ -22,6 +22,7 @@
 		FB88B2E2235701B800A95942 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88B2E1235701B800A95942 /* DetailViewController.swift */; };
 		FB88B2E4235706BB00A95942 /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88B2E3235706BB00A95942 /* DetailViewModelType.swift */; };
 		FB88B2E62357073800A95942 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88B2E52357073800A95942 /* DetailViewModel.swift */; };
+		FB88B2E8235726D900A95942 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB88B2E7235726D900A95942 /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FB88B2E1235701B800A95942 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FB88B2E3235706BB00A95942 /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
 		FB88B2E52357073800A95942 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		FB88B2E7235726D900A95942 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1281622355AF3E0063C078 /* Profile.swift */,
+				FB88B2E7235726D900A95942 /* Box.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				FB1281632355AF3E0063C078 /* Profile.swift in Sources */,
 				FB1281612355AE380063C078 /* TableViewController.swift in Sources */,
 				FB8261562356D99B00E810E9 /* TableViewViewModelType.swift in Sources */,
+				FB88B2E8235726D900A95942 /* Box.swift in Sources */,
 				FB88B2E4235706BB00A95942 /* DetailViewModelType.swift in Sources */,
 				FB88B2E62357073800A95942 /* DetailViewModel.swift in Sources */,
 				FB82615C2356E93500E810E9 /* TableViewCellViewModel.swift in Sources */,

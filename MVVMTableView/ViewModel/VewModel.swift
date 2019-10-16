@@ -17,7 +17,7 @@ class ViewModel: TableViewViewModelType {
                Profile(name: "Alber", secondname: "Pastushov", age: 34),
                Profile(name: "John", secondname: "Smith", age: 12),
            ]
-    
+    //количество строк в таблице
     func numberOfRows() -> Int {
         return profiles.count
     }
