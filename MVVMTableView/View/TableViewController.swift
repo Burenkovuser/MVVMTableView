@@ -55,7 +55,26 @@ class TableViewController: UITableViewController {
         return tableViewCell
     }
    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        viewModel.selectedRow(atIndexPath: indexPath)
+        
+        performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
 
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let identifire = segue.identifier, let viewModel = viewModel else { return }
+        
+        if identifire == "detailSegue" {
+            if let destinationVC = segue.destination as? DetailViewController {
+                destinationVC.viewModel = viewModel.viewModelForSelectedRow()
+            }
+        }
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -91,14 +110,8 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
+    
 
 }

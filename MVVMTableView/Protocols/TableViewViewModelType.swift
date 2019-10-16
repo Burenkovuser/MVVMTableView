@@ -14,6 +14,12 @@ protocol TableViewViewModelType {
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType?
     
+    
+    // для передачи данных в DetailVC
+    func viewModelForSelectedRow() -> DetailViewModelType?
+    // вспомогательный метод для перехода
+    func selectedRow(atIndexPath indexPath: IndexPath)
+    
     //var numberOfRows: Int { get }
     //var profiles: [Profile] { get }
 }

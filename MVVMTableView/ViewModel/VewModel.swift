@@ -10,6 +10,8 @@ import Foundation
 
 class ViewModel: TableViewViewModelType {
     
+    private var selectedIndexPath: IndexPath?
+
    var profiles = [
                Profile(name: "Nessy", secondname: "Masdam", age: 17),
                Profile(name: "Alber", secondname: "Pastushov", age: 34),
@@ -23,6 +25,17 @@ class ViewModel: TableViewViewModelType {
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType? {
         let profile = profiles[indexPath.row]
         return TableViewCellViewModel(profile: profile)
+    }
+    
+    // два метода для передачи данных в DetailVC
+    func viewModelForSelectedRow() -> DetailViewModelType? {
+        
+        guard let selectedIndexPath = selectedIndexPath else { return nil}
+        return DetailViewModel(profile: profiles[selectedIndexPath.row])
+    }
+    
+    func selectedRow(atIndexPath indexPath: IndexPath) {
+        self.selectedIndexPath = indexPath //развняется свойству созданному выше
     }
     
     
